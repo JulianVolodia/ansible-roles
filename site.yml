@@ -1,6 +1,6 @@
 ---
- - hosts: server
+ - hosts: local
    sudo: True
    gather_facts: True
    roles:
-     - common
+     - vnc
