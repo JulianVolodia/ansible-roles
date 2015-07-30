@@ -2,4 +2,6 @@
 default_passwd: usosadm
 vnc_client_res: "1680x1050"
 vnc_users:
-  - { name: 'usosadm', vnc_num: 1 }
+  - { name: 'janek', vnc_num: 1 }
+  - { name: 'aniao', vnc_num: 2 }
+  - { name: 'goldman', vnc_num: 3 }
