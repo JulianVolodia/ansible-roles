@@ -4,20 +4,24 @@ unset SESSION_MANAGER
 
 unset DBUS_SESSION_BUS_ADDRESS
 
-# exec /etc/X11/xinit/xinitrc
+#exec /etc/X11/xinit/xinitrc
+export LANG=pl_PL.utf-8
+export LC_ALL=pl_PL.utf-8
+
+xsetroot -solid grey
+vncconfig -nowin &
 gnome-panel &
 gnome-settings-daemon &
 metacity &
-#nautilus -n &
-nautilus &
+nautilus -n &
+
 gnome-terminal &
 
 [ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
 
 [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
 
-#xsetroot -solid grey
-#vncconfig -iconic &
+
 # gnome-session --session=gnome-classic --disable-acceleration-check &
 
 #export DESKTOP_SESSION="gnome-fallback"
